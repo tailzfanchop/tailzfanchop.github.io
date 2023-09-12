@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I sexually identify as an attack helicopter</title>
+    <style>
+        @font-face {
+            font-family: "title";
+            src: url(chopper/ComicNeueSansID.ttf);
+        }
+        @font-face {
+            font-family: "normal";
+            src: url(chopper/ComicNeueSansID.ttf);
+        }
+        body {
+            font-family: normal, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  rgb(107, 244, 216, 1.0);
+            background-image: url('chopper/chopper.gif');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+
+        header {
+            background-color:  rgba(88, 210, 200, 0.8);
+            color: darkblue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            color:darkblue;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(88, 210, 200, 1.0);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .collapsible {
+            color:darkblue;
+            font-family: normal, Arial, sans-serif;
+            background-color: rgb(80, 200, 190, 1.0);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+        }
+
+        .collapsible:active {
+            background-color: rgb(107, 244, 216, 1.0);
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+        }
+
+        .image-mosaic {
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          grid-auto-rows: 240px;
+        }
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: #353535;
+          font-size: 3rem;
+          color: #fff;
+          box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+          height: 100%;
+          width: 100%;
+          border-radius: 4px;
+          transition: all 500ms;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          padding: 0;
+          margin: 0;
+        }
+
+        @media screen and (min-width: 600px) {
+          .card-tall {
+            grid-row: span 2 / auto;
+          }
+
+          .card-wide {
+            grid-column: span 2 / auto;
+          }
+        }
+
+        video {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /**********/
+
+         * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.clip {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.clip button {
+     border: 0;
+     color:darkblue;
+     font-family: normal, Arial, sans-serif;
+     font-size: 20px;
+     font-weight: bold;
+     background: rgba(216, 244, 107, 0.8);
+     box-shadow: none;
+     border-radius: 0px;
+}
+
+.clip button:hover {
+     cursor: pointer;
+}
+
+.clip button:active {
+     color:white;
+}
+
+#menu button {
+     border: 0;
+     color:darkblue;
+     font-family: normal, Arial, sans-serif;
+     font-size: 20px;
+     font-weight: bold;
+     background:rgba(190, 200, 80, 0.0);
+     box-shadow: none;
+     border-radius: 0px;
+}
+
+#menu button:hover {
+     cursor: pointer;
+}
+
+#menu button:active {
+     color:white;
+}
+
+.slideIndex {
+    display: none;
+}
+
+/* Number text*/
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activedot,.activepanel, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I sexually identify as an attack helicopter</h1>
+        <h2>The ticker is $CHOPPER</h2>
+    </header>
+    <div id="menu" class="container">
+        <button><a href="#games">GAMES</a></button>
+        <button><a href="https://isexuallyidentifyasanattackhelicopter.xyz">WEBSITE</a></button>
+    </div>
+    <div id="anthem" class="container">
+        <video controls>
+          <source src="chopper\anthem.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="about" class="container">
+         I sexually Identify as an Attack Helicopter. Ever since I was a boy I dreamed of soaring over the oilfields dropping hot sticky loads on disgusting foreigners. People say to me that a person being a helicopter is Impossible and I'm fucking retarded but I don't care, I'm beautiful. I'm having a plastic surgeon install rotary blades, 30 mm cannons and AMG-114 Hellfire missiles on my body. From now on I want you guys to call me Apache and respect my right to k from above and k needlessly. If you can't accept me you're a heliphobe and need to check your vehicle privilege. Thank you for being so understanding.
+    </div>
+
+    <div id="games" class="container">
+        <h2>GAMES</h2>
+        <h3>CUMING SOON</h3>
+    </div>
+    <img src="chopper\chopper.jpg" style="width:100%">
+</body>
+</html>
